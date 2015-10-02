@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">     
+
+  <head>         
+    <meta charset="utf-8">         
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">         
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+    <meta name="description" content="Lone Star Freight">
+    <meta name="author" content="kiu Nakamura">         
+    <link rel="shortcut icon" href="favicon.png">         
+    <title>Lone Star Freight | Lone Star Warriors</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">         
+    <link href="css/starter-template.css" rel="stylesheet">         
+    <link href="css/freight.css" rel="stylesheet">
+
+  </head>     
+
+  <body>
+
+<!-- Navigation -->
+     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img style="margin-top: -7px;" src='img/LSWS-small.png'></a>
+        </div>
+        <div class="collapse navbar-collapse pull-right">
+          <ul class="nav navbar-nav">
+            <li class='active'><a href="index.html">Overview</a></li>
+            <li ><a href="jf.html">Jump Freighter</a></li>
+            <li ><a href="stats.html">Stats</a></li>
+            <li ><a href="faq.html">FAQ</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src='img/settings.png'><b class="caret"></b></a>
+              <ul class="dropdown-menu pull-right">
+                <li class="dropdown-header">Helper functions</li>
+                <li><a href="#" onclick="toggleNumberformat();">Toggle Numberformat</a></li>
+                <li><a href="#" onclick="clearCookies();location.reload();">Clear all cookies</a></li>                
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<!-- Navigation -->
+  
+<!-- Alerts -->
+      <div class="alert alert-info hide fade" id="alert-use-igb">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true" onclick="$.cookie('bf-alert-igb', '1', {expires: 3650});">&times;</button>
+        Tip: Using the <strong>in-game browser</strong> enables additional convenience features
+      </div>
+
+      <div class="alert alert-info hide fade" id="alert-not-trusted">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true" onclick="$.cookie('bf-alert-not-trusted', '1', {expires: 3650})">&times;</button>        
+        <p>
+          Tip: <strong>Trusting this site</strong> enables additional convenience features<br>        
+          <small>Please reload this page once after granting trust</small>
+        </p>
+        <br>
+        <button type="button" class="btn btn-danger" onclick="CCPEVE.requestTrust('http://freight.lone-star-warriors.com/*');">Trust this site</button>
+      </div>
+
+<!--
+      <div class="alert alert-danger fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <b>WE ARE DEPLOYING \o/</b><br>
+	<b>Read more about freighting options in regards to the deployment on the <a href="index.html">main</a> page.</b>
+      </div>
+-->
+
+<!-- Alerts -->
+
+<!-- Lead -->
+      <div class="starter-template">
+        <h1>Moving Stuff for Fun and Profit</h1>
+        <p></p>
+				<h4 class="text-danger">Do not contract <strong>assembled</strong> containers or ships!</h4>
+      </div>   
+<!-- Lead -->
+<!-- Ad -->
+
+<div class="container">
+
+    <h4><span class="eve-link" onmouseover="popCorp($(this), 98259161, 'Lone Star Warriors');">Lone Star Warriors</span> offers <a href="http://evewho.com/alli/Yulai+Federation">Yulai</a> and other PROVI-BLOC members a reliable and affordable service for moving goods within the <a href="http://evemaps.dotlan.net/special/Providence-Catch.pdf">PROVI</a> empire.<br></h4>
+    <br>
+    <p>
+        <b>Move Logistics</b><br>
+        <ul>
+        <li>Highsec: <span class="eve-system-06" onmouseover="popSys($(this), 30002964, 'Esescama', '0.6', 'eve-system-07', 60006526, 'Esescama VIII-3 AIW');">Esescama VIII-3 AIW</span></li>
+        <li>Nullsec: <span class="eve-system-00" onmouseover="popSys($(this), 30003764, 'K1Y-5H', '0.0', 'eve-system-00', 61000215, 'K1Y-5H IX AHS');">K1Y-5H IX AHS</span></li>
+
+
+
+	</ul>
+
+	<b>Move assets out of Providence</b><br>
+	<ul>
+	    <li>Use <span class="eve-link" onmouseover="popCorp($(this), 98259161, 'Lone Star Warriors');">Lone Star Warriors</span> to move your assets to <span class="eve-system-05" onmouseover="popSys($(this), 30003497, 'Zaimeth', '0.5', 'eve-system-05', 60005986, 'Zaimeth II-2 FEX');">Zaimeth II-2 FEX</span></li>
+	    <li>Low volume Blockade Runner contracts to <span class="eve-system-06" onmouseover="popSys($(this), 30002964, 'Esescama', '0.6', 'eve-system-07', 60006526, 'Esescama VIII-3 AIW');">Esescama VIII-3 AIW</span> can be setup as public contracts (max 10k m&sup3;; 2M ISK/jump)</li>
+	</ul>
+
+	<b>Move assets to New Home</b><br>
+	<ol>
+<!--
+	    <li>Move assets to <span class="eve-system-05" onmouseover="popSys($(this), 30002986, 'Mendori', '0.5', 'eve-system-05', 60006511, 'Mendori IX-9');">Mendori IX-9</span> or <span class="eve-system-09" onmouseover="popSys($(this), 30003862, 'Agil', '0.9', 'eve-system-09', 60012412, 'Agil VI-2');">Agil VI-2</span> as described above</li>
+-->
+	    <li>Use the excellent service offered by <a href="http://red-frog.org/jumps.php">Red Frog Freight</a> or <a href="http://www.pushx.net/quote.php">PushX</a> to get your goods moved to <span class="eve-system-06" onmouseover="popSys($(this), 30002964, 'Esescama', '0.6', 'eve-system-07', 60006526, 'Esescama VIII-3 AIW');">Esescama VIII-3 AIW</span> <h4 class="text-danger">(our own <strong>highsec</strong> service will be deployed in the near future!)</h4></li>
+	    <li>Use <span class="eve-link" onmouseover="popCorp($(this), 98259161, 'Lone Star Warriors');">Lone Star Warriors</span> to move your assets to <span class="eve-system-00" onmouseover="popSys($(this), 30004617, 'YZ-LQL', '0.1', 'eve-system-00', 60012913, 'YZ-LQL VII-1 GAAP');">YZ-LQL VII-1 GAAP</span></li>
+	</ol>
+
+    </p>
+
+    <hr>
+
+    <p>
+	<b>Intra-null freighting</b><br>
+	<ul><span class="eve-link" onmouseover="popCorp($(this), 98259161, 'Lone Star Warriors');">Lone Star Warriors</span> services all of <a href="http://evemaps.dotlan.net/special/Providence-Catch.pdf">PROVI</a> space. Checkout the <a href="jf.html">details</a> on supported stations, pricing and contract setup.</ul>
+    </p>
+
+    <p>
+	<b>Importing from high security space</b><br>
+	<ol>
+	    <li>Use the excellent service offered by <a href="http://red-frog.org/jumps.php">Red Frog Freight</a> or <a href="http://www.pushx.net/quote.php">PushX</a> to get your goods moved to <span class="eve-system-06" onmouseover="popSys($(this), 30002964, 'Esescama', '0.6', 'eve-system-07', 60006526, 'Esescama VIII-3 AIW');">Esescama VIII-3 AIW</span></li>
+	</ol>
+    </p>
+
+    <p>
+	<b>Exporting to high security space</b><br>
+	<ul>Well, it's the reverse of importing, doh!</ul>
+    </p>
+
+    <p>
+	<b>Querstions?</b><br>
+	<ul><a href="faq.html">Answers!<a></ul>
+    </p>
+
+</div>
+
+<!-- Ad -->
+<!-- Footer -->
+		<p></p>
+    <div id="footer">
+      <div class="container">        
+        <p class="small text-muted pull-right text-right">        
+          Brought to you by <a href="#" class="eve-link" onmouseover="popChar($(this), 92938653, 'kiu Nakamura');">kiu Nakamura</a>
+        </p>
+      </div>
+    </div>
+<!-- Footer -->
+
+<!-- Popups -->
+     <div class="hide" id="popchar" style="background:white;">
+        <table style='border: 1px solid;'>
+          <thead>
+            <tr style='border-bottom: 1px solid;'>
+              <th colspan='3' style='padding-left:2px;' id="popchar-name">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td width='64' height='64' background='img/loaderb32.gif' style='padding:2px; background-repeat:no-repeat; background-position:center;' id="popchar-image">&nbsp;</td>
+              <td style='padding-left:5px; padding-right:5px; padding-top:3px; vertical-align:top;' id="popchar-content-1">&nbsp;</td>
+              <td style='padding-left:5px; padding-right:5px; padding-top:3px; vertical-align:top;' id="popchar-content-2">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="hide" id="popsys" style="background:white;">
+        <table style='border: 1px solid;'>
+          <thead>
+            <tr style='border-bottom: 1px solid;'>
+              <th colspan='2' style='padding-left:2px;' id="popsys-name">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>      
+              <td style='padding-left:5px; padding-right:5px; padding-top:3px; vertical-align:top;' id="popsys-content-1">&nbsp;</td>
+              <td style='padding-left:5px; padding-right:5px; padding-top:3px; vertical-align:top;' id="popsys-content-2">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+     <div class="hide" id="popcorp" style="background:white;">
+        <table style='border: 1px solid;'>
+          <thead>
+            <tr style='border-bottom: 1px solid;'>
+              <th colspan='3' style='padding-left:2px;' id="popcorp-name">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td width='64' height='64' style='padding:2px; background-repeat:no-repeat; background-position:center;' id="popcorp-image">&nbsp;</td>
+              <td style='padding-left:5px; padding-right:5px; padding-top:3px; vertical-align:top;' id="popcorp-content-1">&nbsp;</td>
+              <td style='padding-left:5px; padding-right:5px; padding-top:3px; vertical-align:top;' id="popcorp-content-2">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<!-- Popups -->
+
+<!-- Clipboard -->
+      <div class="modal" id="clipboard" tabindex="-1" role="dialog" aria-labelledby="clipboardLabel" aria-hidden="true" onkeydown="if (event.keyCode == 13) $('#clipboard').modal('hide');">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="clipboardLabel">Copy to clipboard: CTRL-C, Enter</h4>
+            </div>
+            <div class="modal-body">
+              <input type="text" class="form-control text-right" id="clipboard-content">      
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Clipboard -->
+
+	<script src="js/jquery-1.10.2.min.js"></script> 
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/freight.js"></script>
+
+  </body>
+
+</html>
